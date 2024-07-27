@@ -1,0 +1,8 @@
+GameProject {
+ ID "WITA"
+ GUID "61DCD215014DD191"
+ TITLE "WITA"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
