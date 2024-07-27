@@ -18,11 +18,37 @@ PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/Perc
 }
 SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
  coords 7114.389 74.213 6405.445
+ Factions {
+  SCR_Faction "{56DEAC40D2DBC8B1}" {
+   UIInfo SCR_FactionUIInfo "{528C961236B7DCD3}" {
+    Name "Agent"
+    Description "Player that gets hunted"
+    Icon "{A154A4D7278D122B}UI/Textures/Editor/EditableEntities/Factions/EditableEntity_Faction_Non-Combatant.edds"
+    m_sNameUpper "AGENT"
+   }
+   m_bIsPlayable 1
+   m_sFactionFlag "{5482FF3C7863EB18}UI/Textures/Flags/Non-Combatant-flag-base.edds"
+  }
+  SCR_Faction "{56DEAC40D3C2E623}" {
+   UIInfo SCR_FactionUIInfo "{528C96127F8B6B08}" {
+    Name "Special Forces"
+    Description "Players that go hunting"
+    m_sNameUpper "SPECIAL FORCES"
+   }
+   m_bIsPlayable 1
+  }
+ }
 }
 RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
  coords 7114.537 74.066 6406
 }
 SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/ScenarioFramework/GameModeSF.et" {
+ components {
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+   }
+  }
+ }
  coords 7114.537 75.238 6401
  m_bAllowFactionChange 0
  m_bUseSpawnPreload 1
@@ -47,4 +73,18 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/T
 }
 SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
  coords 7114.387 74.213 6405.444
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{61F6CE53611B69B3}" {
+   m_sLoadoutName "Agent"
+   m_sLoadoutResource "{B3AB6D12D247DDB5}Prefabs/Characters/Factions/CIV/Businessman/Character_CIV_Businessman_Randomized.et"
+   m_sLoadoutImage "{8E4175829BD23E47}UI/Textures/DeployMenu/Loadout-BG/Loadout_CIV_Dawn.edds"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{61F6CE538BB9904E}" {
+   m_sLoadoutName "Special Force"
+   m_sLoadoutResource "{B6F05D4557B61C4E}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_BaseLoadout.et"
+   m_sLoadoutImage "{306B24C6423CA9E5}UI/Textures/DeployMenu/Loadout-BG/Loadout_Custom_Dawn.edds"
+   m_sAffiliatedFaction "USSR"
+  }
+ }
 }

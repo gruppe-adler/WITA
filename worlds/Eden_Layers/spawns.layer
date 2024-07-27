@@ -1,0 +1,23 @@
+SCR_SpawnPoint : "{4FEA25583D0975F7}Prefabs/MP/Spawning/SpawnPoint_USSR.et" {
+ components {
+  SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
+   UnitType Infantry
+   Faction 1
+  }
+ }
+ coords 7463.634 8.602 6718.653
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Icon "{5482FF3C7863EB18}UI/Textures/Flags/Non-Combatant-flag-base.edds"
+ }
+}
+SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ components {
+  SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
+   UnitType Infantry
+  }
+ }
+ coords 7072.983 118.759 6025.205
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Icon "{CCF597A247ACFD7F}UI/Textures/Flags/CIV-flag-base.edds"
+ }
+}
